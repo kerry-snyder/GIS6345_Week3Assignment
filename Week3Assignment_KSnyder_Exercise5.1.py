@@ -13,9 +13,20 @@ seconds = totalseconds // 1
 minutes = rawminutes % 60
 
 #Adjustment to eastern time
-easterntimehours = hours - 4
+def eastern_time(hours):
+    if hours >= 4:
+        return hours - 4
+    elif hours == 1:
+        return 21
+    elif hours == 2:
+        return 22
+    elif hours == 3:
+        return 23
+    else: 
+        return abs(hours - 20)
 
-print ('The current time (ET) is', easterntimehours, 'hours', minutes, 'minutes', seconds, 'seconds')
+print ('The current time (ET) is', eastern_time(hours) , 'hours', minutes, 'minutes', seconds, 'seconds')
+
 wholedays = GMT//(24*60*60)
 
 print('We are currently', wholedays, 'days past the epoch')

@@ -27,6 +27,7 @@ def eastern_time(hours):
 
 print ('The current time (ET) is', eastern_time(hours) , 'hours', minutes, 'minutes', seconds, 'seconds')
 
+#Calculation of whole days since the epoch
 wholedays = GMT//(24*60*60)
 
 print('We are currently', wholedays, 'days past the epoch')
